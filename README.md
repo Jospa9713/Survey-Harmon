@@ -1,2 +1,2 @@
 # Survey-Harmon
-  Just havve to run index.html
+  Just have to run index.html
