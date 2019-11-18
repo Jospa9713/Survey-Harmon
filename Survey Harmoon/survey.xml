@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml-stylesheet href="survey.xsl" type="text/xsl"?>
+    <questions>
+        <question1 label="q1">
+            <title>Which of the below are reasons why you did not take advantage of the T-Mobile Home Internet offer? [Please select all that apply.] </title>
+            <txt1>1.I am in a contract with an internet provider and cannot get out without paying a penalty</txt1>
+            <txt3>3.I don’t want to be part of a new product; I’ll wait to see how it plays out</txt3>
+            <txt2>2.I didn’t believe the offer was true</txt2>
+            <txt4>4.My current internet experience is just fine</txt4>
+            <txt5>5.I don’t want to deal with the hassle of setting up new systems and/or hardware</txt5>
+            <txt6>6.The offer ($50) was more than I currently pay</txt6>
+            <txt7>7.The offer was too expensive</txt7>
+            <txt8>8.The offer speeds are less than what I am currently getting</txt8>
+            <txt9>9.I didn’t fully understand the offer</txt9>
+            <txt10>10.I didn’t get the offer invitation (Direct Mail, Email or Text)</txt10>
+            <txt11>11.I didn’t understand what the offer included</txt11>
+            <txt12>12.I attempted to get the offer and received a “waiting list” or “hold that thought” response</txt12>
+            <txt13>13.I forgot about the offer</txt13>
+            <txt14>14.I am not interested</txt14>
+            <txt15>15.Other(Specify)</txt15>
+            <txt16 label="none">16.None</txt16>
+        </question1>
+
+        <question2>
+            <title>Q2. If you are still interested in the offer, would you like us to send you a new invite? [Please select one response.]</title>
+            <txt1>1.Yes</txt1>
+            <txt2>2.No</txt2>
+        </question2>
+        <question3 label="bye">
+                <txt1>Those are all the questions we have for you today! We are very appreciative of the time you have taken out of your day.</txt1>
+        </question3>
+
+        <question4>
+            <title>Q4. How satisfied are you with </title>
+            <txt1> [Please select one response.]</txt1>
+        </question4>
+    </questions>
+
+
+  
+    

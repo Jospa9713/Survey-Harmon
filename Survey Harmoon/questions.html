@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Survey</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script type="text/javascript">
+        //Functions
+        function hideQ1(){
+            document.getElementById('question1').style.display = 'none';
+            document.getElementById('question2').style.display='block';
+        }
+        function hideQ2(){
+            document.getElementById('question2').style.display="none";
+            var checkBox = document.getElementById("chk16");
+            var byeMessage = document.getElementById("question3");
+            if (checkBox.checked == true){
+                     byeMessage.style.display="block";
+
+            } else {
+                     byeMessage.style.display = "none";
+                     document.getElementById('question4').style.display='block';
+                    }
+        }
+        function showQuestion3(){
+            document.getElementById("question3").style.display="block";
+            document.getElementById('question4').style.display='none';
+        }
+
+        function showSelect(){
+            var s = document.querySelector("#question1");
+            var y = s.querySelectorAll("input:checked");
+            var checkbox = document.getElementById("chk15");
+            var txtBox = document.getElementById("textBox").value;
+            for(i=0; i <y.length;i++){
+             var reason = document.querySelectorAll("p."+y[i].className)
+                  document.getElementById("value").innerHTML += reason[0].innerHTML+"  "; 
+                  if(checkbox.checked == true){ 
+                    document.getElementById("value").innerHTML += txtBox;
+                  }
+            }
+            hideQ2();
+        }
+
+    </script>
+</head>
+<body>
+    <header class="headerQ">
+            <img src="/img/T-logo.jpg" alt="logo" width="200px" height="200px">
+    </header>
+    <form action="">
+        <div class="Question">
+            <section id="question1">
+
+                <h4 id="title1">Q1. Which of the below are reasons why you did not take advantage of the T-Mobile Home Internet offer?<br>[Please select all that apply.] </h4>
+                   <table>
+                       <tr>
+                           <td> <p id="t1" class="reason1"></p> </td>
+                           <td> <input type="checkbox" name="chk1" id="chk1" class="reason1"> </td>
+                       </tr> 
+                       <tr>
+                           <td><p id="t2" class="reason2"></p></td>
+                           <td><input type="checkbox" name="chk2" id="chk2" class="reason2"></td>
+                       </tr>
+                       <tr>
+                           <td><p id="t3" class="reason3"></p></td>
+                           <td><input type="checkbox" name="chk3" id="chk3" class="reason3"></td>
+                       </tr>
+                       <tr>
+                           <td> <p id="t4" class="reason4"></p></td>
+                           <td><input type="checkbox" name="chk4" id="chk4" class="reason4"></td>
+                       </tr>
+
+                       <tr>
+                            <td><p id="t5" class="reason5"></p></td>
+                            <td> <input type="checkbox" name="chk5" id="chk5" class="reason5"></td>
+                       </tr>
+                       <tr>
+                            <td><p id="t6" class="reason6"></p></td>
+                            <td> <input type="checkbox" name="chk6" id="chk6" class="reason6"> </td>
+                        </tr>
+                       <tr>
+                           <td> <p id="t7" class="reason7"></p></td>
+                           <td><input type="checkbox" name="chk7" id="chk7" class="reason7"></td>
+                        </tr>
+                       <tr>
+                            <td> <p id="t8" class="reason8"></p></td>
+                            <td><input type="checkbox" name="chk8" id="chk8" class="reason8"> </td>
+                        </tr>
+                       <tr>
+                            <td><p id="t9" class="reason9"></p></td>
+                            <td> <input type="checkbox" name="chk9" id="chk9" class="reason9"></td>
+                        </tr>
+                       <tr>
+                           <td> <p id="t10" class="reason10"></p></td>
+                            <td> <input type="checkbox" name="chk10" id="chk10" class="reason10"> </td>
+                       </tr>
+                       <tr>
+                           <td> <p id="t11" class="reason11"></p></td>
+                           <td><input type="checkbox" name="chk11" id="chk11" class="reason11"> </td>
+                       </tr>
+                       <tr>
+                           <td><p id="t12" class="reason12"></p></td>
+                           <td> <input type="checkbox" name="chk12" id="chk12" class="reason12"></td>
+                       </tr>
+                       <tr>
+                           <td><p id="t13" class="reason13"></p></td>
+                           <td><input type="checkbox" name="chk13" id="chk13" class="reason13"></td>
+                       </tr>
+                       <tr>
+                           <td><p id="t14" class="reason14"></p></td>
+                           <td><input type="checkbox" name="chk14" id="chk14" class="reason14"></td>
+                       </tr>
+                       <tr>
+                           <td> <p id="t15" class="reason15"></p>
+                            <input type="text" id="textBox" style="height: 25px;">
+                            </td>
+                           <td><input type="checkbox" name="chk15" id="chk15" class="reason15"></td>
+                       </tr>
+                       <tr>
+                            <td><p id="t16" class="reason16"></p></td>
+                            <td><input type="checkbox" name="chk16" id="chk16" class="reason16"></td>
+                       </tr>
+                       <tr>
+                           <td><button id="boton2" name="btnP" type="button" onclick="hideQ1()" style="height:50px;width:200px;margin-left:80% ;">Continue</button></td>
+                       </tr>
+                   </table>
+            </section>
+            
+            <section id="question2" style="display: none;">
+                <h4 id="title2"> <br> [Please select one response.]</h4>
+                <table>
+                    <tr>
+                        <td><p id="radiobtn1"></p></td>
+                        <td> <input type="radio" name="radiobtn1" value="yes"></td>
+                </tr>
+                <tr>
+                    <td><p id="radiobtn2"></p></td>
+                    <td><input type="radio" name="radiobtn1" value="no"></td>
+                </tr>
+                    <tr>
+                        <td><button name="btnP" type="button" onclick="showSelect()" style="height:50px;width:200px;margin-left:25% ;">Continue</button></td>
+                    </tr>
+                </table>
+                   
+                    
+                     
+            </section> 
+
+            <section id="question3" style="display: none;">
+                <p id="byeMessage"></p>
+            </section>  
+
+            <section id="question4" style="display: none;">
+                <p id="q4"> </p> <p id="value"></p><br>
+                <p id="q4.1"></p>
+               
+                  <table id="lastQ">
+                    <tr>
+                     <th colspan="5" >NOT AT ALL SATISFIED</th>
+                   
+                     <th colspan="5">EXTREMELY SATISFIED</th>
+                    </tr>
+                    <tr>
+                       <td> <input type="radio" name="radiobtn3">1</td>
+                       <td> <input type="radio" name="radiobtn3">2</td>
+                       <td> <input type="radio" name="radiobtn3">3</td>
+                       <td> <input type="radio" name="radiobtn3">4</td>
+                       <td> <input type="radio" name="radiobtn3">5</td>
+                       <td> <input type="radio" name="radiobtn3">6</td>
+                       <td> <input type="radio" name="radiobtn3">7</td>
+                       <td> <input type="radio" name="radiobtn3">8</td>
+                       <td> <input type="radio" name="radiobtn3">9</td>
+                       <td> <input type="radio" name="radiobtn3">10</td>
+                        
+                     </tr>
+                     
+                  </table>
+                  <button name="btnP" type="button" onclick="showQuestion3()" style="height:40px;width:200px;margin-bottom:25% ;">Continue</button>
+            </section>
+
+        </div>
+    </form>
+    <script>
+        //Request XML FILE
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                myFunction(this);
+                }
+            };
+            xhttp.open("GET", "survey.xml", true);
+            xhttp.send();
+            //Get data from XML
+            function myFunction(xml) {
+                var xmlDoc = xml.responseXML;
+                ///Get data to question1
+                for(i=1;i<17;i++){
+                    var e="t";
+                    var tag="txt";
+                    var int = [i];
+                    var numid=int.toString();
+                    document.getElementById(e.concat(numid)).innerHTML =
+                xmlDoc.getElementsByTagName(tag.concat(numid))[0].childNodes[0].nodeValue;
+                }
+                ///Get data to question2
+                for(i=1;i<3;i++){
+                    var int = [i];
+                    var numid=int.toString();
+                    var rad = "radiobtn";
+                    var txt = "txt"; 
+                document.getElementById("title2").innerHTML =
+                xmlDoc.getElementsByTagName("title")[1].childNodes[0].nodeValue;
+                document.getElementById(rad.concat(numid)).innerHTML =
+                xmlDoc.getElementsByTagName(txt.concat(numid))[1].childNodes[0].nodeValue;
+                }
+                
+                //Get data byeMessage
+                document.getElementById("byeMessage").innerHTML =
+                xmlDoc.getElementsByTagName("txt1")[2].childNodes[0].nodeValue;
+
+                //Get data Question4
+                document.getElementById("q4").innerHTML =
+                xmlDoc.getElementsByTagName("title")[2].childNodes[0].nodeValue;
+                document.getElementById("q4.1").innerHTML =
+                xmlDoc.getElementsByTagName("txt1")[3].childNodes[0].nodeValue;
+            }
+            </script>
+    
+</body>    
+
+</html>
